@@ -1,14 +1,23 @@
 <!-- Don't delete it -->
-
 <div name="readme-top"></div>
 
+<div align="center" style="position: relative; width:175px; margin:auto;">
 
+  <img 
+    alt="Stability Nexus" 
+    src="public/logo-dark.png" 
+    width="175"
+    style="position:absolute; top:0; left:0;"
+  />
 
-<!-- Organization Logo -->
+  <img 
+    alt="Fate Protocol" 
+    src="public/Animated/logo-animated.gif" 
+    width="175"
+    style="position:absolute; top:0; left:0;"
+  />
 
-<div align="center" style="display: flex; align-items: center; justify-content: center; gap: 16px;">
-
-  <img alt="Stability Nexus" src="public/stability.svg" width="175">
+</div>
 
   
 
