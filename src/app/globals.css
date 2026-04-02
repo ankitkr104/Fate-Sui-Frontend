@@ -126,6 +126,11 @@ html.dark ::selection {
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
+}
+
+* {
+  cursor: none !important;
 }
 /* --- Fate Loader: minimal, monochromatic, theme-aware --- */
 

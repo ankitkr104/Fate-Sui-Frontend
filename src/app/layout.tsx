@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -37,7 +37,7 @@ export default function RootLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
-            enableSystem
+            enableSystem={false}
             disableTransitionOnChange
           >
             <AppLoader minDuration={700}>
