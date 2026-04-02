@@ -234,7 +234,7 @@ To set up the project locally, follow the steps below.
 ```bash
 git clone https://github.com/StabilityNexus/Fate.git
 cd Fate
-npm i
+npm install
 npm run dev
 ```
 
