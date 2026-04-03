@@ -127,6 +127,25 @@ html.dark ::selection {
 html {
   scroll-behavior: smooth;
 }
+
+/* Enable custom cursor only on devices that support hover (not touch) */
+@media (hover: hover) and (pointer: fine) {
+  html[data-custom-cursor="enabled"],
+  html[data-custom-cursor="enabled"] body {
+    cursor: none;
+  }
+
+  /* Preserve semantic cursor affordances */
+  html[data-custom-cursor="enabled"] input,
+  html[data-custom-cursor="enabled"] textarea {
+    cursor: text;
+  }
+
+  html[data-custom-cursor="enabled"] [disabled],
+  html[data-custom-cursor="enabled"] [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
 /* --- Fate Loader: minimal, monochromatic, theme-aware --- */
 
 /* Spin (slow & reverse) */

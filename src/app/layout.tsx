@@ -6,6 +6,7 @@ import { ProviderSui } from "@/Providers/SuiProvider";
 import AppLoader from "@/components/Loader";
 import { Toaster } from "react-hot-toast";
 import ReactQueryProvider from "@/Providers/QueryClientProvider";
+import CursorProvider from "@/components/CursorProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -37,13 +38,14 @@ export default function RootLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
-            enableSystem
+            enableSystem={false}
             disableTransitionOnChange
           >
             <AppLoader minDuration={700}>
-              {" "}
-              <ReactQueryProvider>{children}</ReactQueryProvider>
-              <Toaster />
+              <CursorProvider>
+                <ReactQueryProvider>{children}</ReactQueryProvider>
+                <Toaster />
+              </CursorProvider>
             </AppLoader>
           </ThemeProvider>
         </ProviderSui>

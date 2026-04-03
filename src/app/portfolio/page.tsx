@@ -27,7 +27,6 @@ import {
 import { useRef, useState, useEffect, useMemo, useCallback } from "react";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import StickyCursor from "@/components/StickyCursor";
 import { usePool } from "@/fateHooks/usePool";
 import { bcs } from "@mysten/sui/bcs";
 import { SuiClient } from "@mysten/sui/client";
@@ -806,7 +805,6 @@ export default function PortfolioPage() {
     <>
       <AppLoader minDuration={500}>
         <Navbar />
-        <StickyCursor stickyRef={stickyRef} />
         <div className="min-h-screen bg-white dark:bg-black text-neutral-900 dark:text-white p-4 md:p-6">
           <div className="max-w-7xl mx-auto space-y-8">
             {/* Debug Info */}

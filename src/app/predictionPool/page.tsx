@@ -25,7 +25,6 @@ import { useRouter } from "next/navigation";
 import { Token } from "@/types/Token";
 import { Pool } from "@/types/Pool";
 import { Transaction } from "@mysten/sui/transactions";
-import StickyCursor from "@/components/StickyCursor";
 import {
   Select,
   SelectContent,
@@ -390,7 +389,6 @@ const ExploreFatePools = () => {
   return (
     <>
       <Navbar />
-      <StickyCursor stickyRef={stickyRef} />
 
       <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300 text-black dark:text-white ">
         <div className="max-w-full mx-auto px-4">
